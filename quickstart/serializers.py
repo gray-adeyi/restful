@@ -6,7 +6,7 @@
 """
 
 from django.contrib.auth.models import User, Group
-from rest_franework import serializers
+from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -15,7 +15,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url','username','email','groups']
 
 
-class GroupSerializer(serializer.HyperlinkedModelSerializer):
+class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
